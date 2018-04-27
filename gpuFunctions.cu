@@ -44,6 +44,7 @@ struct is_PVbusCol {
 	}
 };
 
+//Main Menu function - allows user to select power system for simulation
 void optionSelect(int option) {
 	ifstream busdata, linedata;
 	int numLines=0;
@@ -163,6 +164,7 @@ void optionSelect(int option) {
 	}
 }
 
+//Allows user to enter a valid option from the Main Menu
 void answerSelect() {
 	char answer;
 	int option;
@@ -192,6 +194,7 @@ void answerSelect() {
 	}
 }
 
+//This is the "main" function in gpuFunctions.cu where the NR load flow solution of standard power systems occurs
 int IEEEStandardBusSystems(int numberOfBuses, ifstream &busData, ifstream &lineData, int numLines) 
 {
 	//cudaProfilerStart();
